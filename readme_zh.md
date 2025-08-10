@@ -26,7 +26,7 @@ Margin-mode 主要用来给不同的 major mode 的 buffer 所在的 window 设�
     (use-package margin-mode
       :load-path "/path/to/margin-mode"
       :config
-      (setq margin-work-modes '((org-mode 2 0) markdown-mode))
+      (setq margin-work-modes '(text-mode)
       (margin-mode 1))
 
 ## 注意

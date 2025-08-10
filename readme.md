@@ -27,7 +27,7 @@ Example configuration:
     (use-package margin-mode
       :load-path "/path/to/margin-mode"
       :config
-      (setq margin-work-modes '((org-mode 2 0) markdown-mode))
+      (setq margin-work-modes '(text-mode)
       (margin-mode 1))
   
 ## Notes
