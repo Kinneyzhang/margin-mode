@@ -4,7 +4,7 @@ Margin-mode 主要用来给不同的 major mode 的 buffer 所在的 window 设�
 除了保持 margin 不失效外，margin-mode 支持通过配置给不同的 major mode(及继承该模式的所有子模式)设置不同的左右 margin。当设置了 `margin-work-modes` 变量后，当前显示的窗口 margin 可以实时改变，无需重新加载 major mode。
 
 ## 使用
-`margin-mode` 的使用非常简单，只需要设置 `margin-work-modes` 这个变量。这个变量是一个列表，其含义是哪些 major mode(及其子模式) 支持使用该包来设置 margin，同时可以具体设置不同的 mafor mode 使用不同的 margin 宽度。
+`margin-mode` 的使用非常简单，只需要设置 `margin-work-modes` 这个变量。这个变量是一个列表，其含义是哪些 major mode(及其子模式) 支持使用该包来设置 margin，同时可以具体设置不同的 major mode 使用不同的 margin 宽度。
 
 下面的是该变量支持的多种格式及其含义：
 
