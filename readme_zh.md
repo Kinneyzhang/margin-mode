@@ -8,21 +8,14 @@ Margin-mode 主要用来给不同的 major mode 的 buffer 所在的 window 设�
 
 下面的是该变量支持的多种格式及其含义：
 
-1. 元素值是 major mode 符号
-`(setq margin-work-modes '(markdown-mode org-mode))` 将 markdown-mode 和 org-mode 所在窗口的左右 margin 设置默认的 `margin-left-width` 和 `margin-right-width` 的值。
-
-2. 元素值是 major mode 符号和一个数字组成的列表
-`(setq margin-work-modes '(markdown-mode (org-mode 3)))` 将左右 margin 都设置为该数字的值：markdown-mode 的窗口左右 margin 宽度和第一种情况一致，org-mode 窗口的左右 margin 都设置为列表中指定的 3。
-
-3. 元素值是 major mode 符号和两个数字组成的列表
-`(setq margin-work-modes '(markdown-mode (org-mode 3 0)))` 将左右 margin 分别设置为这两个数字的值：markdown-mode 的窗口左右 margin 宽度和第一种情况一致，org-mode 窗口的左 margin 设置列表中指定的 3，右 margin 设置列表中指定的 0。
-
-4. 子模式继承父模式的设置
-比如 `(setq margin-work-modes '(fundamental-mode))` 表示所有模式窗口都设置默认的 margin; 
-
-`(setq margin-work-modes '((text-mode 2 0)))` 表示所有 text-mode 的子模式(org-mode, markdown-mode...) 左右 margin 都设置为 2,0;
-
-`(setq margin-work-modes '((prog-mode 1)))` 表示所有编程语言的模式 prog-mode 的子模式左右 margin 都设置为 1 ...
+| 案例                                         | 配置                                                       | 含义                                                                                                                                                                      |
+|:---------------------------------------------|:-----------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 元素值是 major mode 符号                     | `(setq margin-work-modes '(markdown-mode org-mode))`       | 将 markdown-mode 和 org-mode 所在窗口的左右 margin 设置默认的 `margin-left-width` 和 `margin-right-width` 的值。                                                          |
+| 元素值是 major mode 符号和一个数字组成的列表 | `(setq margin-work-modes '(markdown-mode (org-mode 3)))`   | 将左右 margin 都设置为该数字的值：markdown-mode 的窗口左右 margin 宽度和第一种情况一致，org-mode 窗口的左右 margin 都设置为列表中指定的 3。                               |
+| 元素值是 major mode 符号和两个数字组成的列表 | `(setq margin-work-modes '(markdown-mode (org-mode 3 0)))` | 将左右 margin 分别设置为这两个数字的值：markdown-mode 的窗口左右 margin 宽度和第一种情况一致，org-mode 窗口的左 margin 设置列表中指定的 3，右 margin 设置列表中指定的 0。 |
+| 子模式继承父模式的设置，例1                  | `(setq margin-work-modes '(fundamental-mode))`             | 表示所有模式窗口都设置默认的 margin。                                                                                                                                     |
+| 子模式继承父模式的设置，例2                  | `(setq margin-work-modes '((text-mode 2 0)))`              | 表示所有 text-mode 的子模式(org-mode, markdown-mode...) 左右 margin 都设置为 2,0。                                                                                        |
+| 子模式继承父模式的设置，例3                  | `(setq margin-work-modes '((prog-mode 1)))`                | 表示所有编程语言的模式 prog-mode 的子模式左右 margin 都设置为 1。                                                                                                         |
 
 使用 `margin-major-mode-chain` 函数来获取当前 major-mode 继承自哪些父模式。
 
