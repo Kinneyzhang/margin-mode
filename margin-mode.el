@@ -60,7 +60,7 @@ e.g.
 If CURRENT-MODE is nil, defaults to major mode of current buffer.
 It returns which generation of the parent major mode of current
 major mode."
-  (when-let* ((modes (major-mode-chain
+  (when-let* ((modes (margin-major-mode-chain
                       (or current-mode major-mode)))
               (parents (member derived-mode modes)))
     (length parents)))
